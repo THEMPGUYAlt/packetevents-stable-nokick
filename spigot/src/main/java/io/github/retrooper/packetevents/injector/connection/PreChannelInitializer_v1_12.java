@@ -47,7 +47,9 @@ public class PreChannelInitializer_v1_12 extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable t) {
-        PreChannelInitializer_v1_12.logger.warn("Failed to initialize a channel. Closing: " + ctx.channel(), t);
-        ctx.close();
+        // last one i gotta do to disable all the dumb kicks
+        //PreChannelInitializer_v1_12.logger.warn("Failed to initialize a channel. Closing: " + ctx.channel(), t);
+        //ctx.close();
+        return;
     }
 }
