@@ -95,8 +95,9 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
             // Check if it's a fake connection
             if (!FakeChannelUtil.isFakeChannel(this.connection.channel) &&
                     (!api.isTerminated() || api.getSettings().isKickIfTerminated())) {
-                // Kick the player if they're not a fake player
-                this.connection.disconnect(Component.literal("PacketEvents failed to inject into a channel."));
+                // Kick the player if they're not a fake player --DISABLED
+                //this.connection.disconnect(Component.literal("PacketEvents failed to inject into a channel."));
+                return;
             }
             return;
         }
