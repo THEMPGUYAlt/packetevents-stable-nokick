@@ -43,8 +43,9 @@ public class InternalSpongeListener {
             Object channel = PacketEvents.getAPI().getPlayerManager().getChannel(player);
             // Check if it is a fake connection...
             if (!FakeChannelUtil.isFakeChannel(channel)) {
-                // Kick them, if they are not a fake player.
-                player.kick(Component.text("PacketEvents failed to inject into a channel."));
+                // Kick them, if they are not a fake player. --DISABLED
+                //player.kick(Component.text("PacketEvents failed to inject into a channel."));
+                return;
             }
             return;
         }
