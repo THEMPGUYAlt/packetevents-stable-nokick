@@ -30,7 +30,7 @@ import org.bukkit.event.player.PlayerLoginEvent;
 import org.jetbrains.annotations.ApiStatus;
 import org.jspecify.annotations.NullMarked;
 
-import static io.github.retrooper.packetevents.bukkit.InternalBukkitListener.KICK_MESSAGE;
+//import static io.github.retrooper.packetevents.bukkit.InternalBukkitListener.KICK_MESSAGE;
 
 /**
  * Used on Paper 1.20.5-1.21.6 or Spigot 1.20.5+
@@ -57,6 +57,6 @@ public class InternalBukkitLoginListener implements Listener {
         }
         // since 1.20.5 and cookie packets, CraftBukkit associates the login listener with the player
         // before calling the login event; if this fails on 1.20.5+, something broke a lot
-        event.disallow(PlayerLoginEvent.Result.KICK_OTHER, KICK_MESSAGE);
+        //event.disallow(PlayerLoginEvent.Result.KICK_OTHER, KICK_MESSAGE);
     }
 }
