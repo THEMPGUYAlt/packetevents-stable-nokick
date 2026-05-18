@@ -47,7 +47,7 @@ import java.util.UUID;
 @ApiStatus.Internal
 public class InternalBukkitListener implements Listener {
 
-    static final String KICK_MESSAGE = "PacketEvents failed to inject into a channel";
+    //static final String KICK_MESSAGE = "PacketEvents failed to inject into a channel";
 
     private final Plugin plugin;
 
@@ -103,9 +103,9 @@ public class InternalBukkitListener implements Listener {
 
         // delay by a tick
         FoliaScheduler.getEntityScheduler().runDelayed(player, this.plugin, __ -> {
-            // only kick if the player is actually still connected
+            // only kick if the player is actually still connected --DISABLED
             if (channel != null ? ChannelHelper.isOpen(channel) : player.isOnline()) {
-                player.kickPlayer(KICK_MESSAGE);
+                //player.kickPlayer(KICK_MESSAGE);
             }
         }, null, 0);
     }
